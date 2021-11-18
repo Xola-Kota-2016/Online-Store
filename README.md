@@ -1,5 +1,5 @@
 
-# Online-Store
+# Online-Store [onsole App (.NET Framework)]
 C# Assessment Project
 
 You've been tasked to implement a very basic Online Store using C#. In Phase 1 you will only implement the back-end of the store, a class library, not the front-end.
