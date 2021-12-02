@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace Online_Store
 {
-    interface IonlineStore
+    public interface IonlineStore
     {
         void AddProductsToInventory(ProductsPurchaseOrder purchaseOrder);
 
@@ -27,7 +27,7 @@ namespace Online_Store
         InventorySummary GetInventorySummary();
 
     }
-    internal class Program
+    public class Program
     {
         /*
          * returns true if the user entered an integer within the required range as input,
@@ -324,7 +324,7 @@ namespace Online_Store
      * The ProductType class returns the name of the type of inventory.
      * Example: Laptop, phone or tablet
      */
-    class ProductType
+    public class ProductType
     {
         private string type;
         public ProductType(string type)
@@ -342,7 +342,7 @@ namespace Online_Store
      * of the stock currently available.
      * 
      */
-    class Stock
+    public class Stock
     {
         private ProductType productType;
         private int quantity;
@@ -425,7 +425,7 @@ namespace Online_Store
      * product in the inventory.
      * 
      */
-    class InventoryItemSummary
+    public class InventoryItemSummary
     {
         private Stock stockType;
         public InventoryItemSummary(Stock stockType)
@@ -445,7 +445,7 @@ namespace Online_Store
      * The ProductsPurchaseOrder class object is created when the store owner adds a product into the inventory.
      * This object has information about the type of item bought, its quantity and price per item.
      */
-    class ProductsPurchaseOrder
+    public class ProductsPurchaseOrder
     {
         private ProductType productType;
         private double pricePerItem;
@@ -475,7 +475,7 @@ namespace Online_Store
      * The ProductsSellOrder class object is created when a customer buys from the store.
      * This object has information about the type of item being sold and its quantity.
      */
-    class ProductsSellOrder
+    public class ProductsSellOrder
     {
         private ProductType productType;
         private int quantity;
@@ -501,7 +501,7 @@ namespace Online_Store
      * 
      * All the store owner admin methods/actions will be called in this class. 
      */
-    class OnlineStore : IonlineStore
+    public class OnlineStore : IonlineStore
     {
         private Stock laptops, tablets, phones;
 
@@ -593,7 +593,7 @@ namespace Online_Store
      * The InventorySummary class prints on the console information about all the inventory currently in the
      * store when the Display() method is called on its object.
      */
-    class InventorySummary
+    public class InventorySummary
     {
         private OnlineStore store;
         public InventorySummary(OnlineStore store)
@@ -622,7 +622,7 @@ namespace Online_Store
      * The store owner will be notified if the transction is unsuccessful due to inventory shortage, or when the trans
      * action is successful due to enough products in the inventory.
      */
-    class ProductsSoldResult
+    public class ProductsSoldResult
     {
         private OnlineStore store;
         private ProductType productType;
